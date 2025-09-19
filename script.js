@@ -6,3 +6,13 @@ document.querySelectorAll('form').forEach(form => {
     form.reset();
   };
 });
+
+// Smooth scroll effect
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth"
+    });
+  });
+});
