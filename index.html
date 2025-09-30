@@ -60,8 +60,10 @@
         <span class="brand-text">PR.DEV</span>
       </div>
       <ul class="nav-menu">
-        <li><a href="#skills" data-text="SKILLS">Skills</a></li>
+        <li><a href="#about" data-text="ABOUT">About</a></li>
         <li><a href="#projects" data-text="PROJECTS">Projects</a></li>
+        <li><a href="#experience" data-text="EXPERIENCE">Experience</a></li>
+        <li><a href="#skills" data-text="SKILLS">Skills</a></li>
         <li><a href="#education" data-text="EDUCATION">Education</a></li>
         <li><a href="#contact" data-text="CONTACT">Contact</a></li>
       </ul>
@@ -75,42 +77,26 @@
 
   <!-- Main Content -->
   <main>
-    <!-- Skills Section -->
-    <section id="skills" class="section">
+    <!-- About Me Section -->
+    <section id="about" class="section">
       <div class="container">
-        <h2 class="section-title" data-text="SKILLS">
-          <span class="title-number">01.</span>
-          SKILLS
+        <h2 class="section-title" data-text="ABOUT ME">
+          ABOUT ME
         </h2>
-        <div class="skills-grid">
-          <div class="skill-category">
-            <h3>Frontend</h3>
-            <div class="skill-items">
-              <span class="skill-item" data-level="95">HTML5</span>
-              <span class="skill-item" data-level="90">CSS3</span>
-              <span class="skill-item" data-level="85">JavaScript</span>
-              <span class="skill-item" data-level="80">React</span>
-              <span class="skill-item" data-level="75">Bootstrap</span>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h3>Backend</h3>
-            <div class="skill-items">
-              <span class="skill-item" data-level="80">Node.js</span>
-              <span class="skill-item" data-level="85">Python</span>
-              <span class="skill-item" data-level="75">MySQL</span>
-              <span class="skill-item" data-level="70">MongoDB</span>
-              <span class="skill-item" data-level="80">Appwrite</span>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h3>Tools & Platforms</h3>
-            <div class="skill-items">
-              <span class="skill-item" data-level="90">Git</span>
-              <span class="skill-item" data-level="85">GitHub</span>
-              <span class="skill-item" data-level="80">VS Code</span>
-              <span class="skill-item" data-level="75">Figma</span>
-              <span class="skill-item" data-level="70">Docker</span>
+        <div class="about-content">
+          <div class="about-text">
+            <p>Hello! I'm Prithiviraj, a passionate computer science student and web developer based in Villupuram, Tamil Nadu. I specialize in creating modern, responsive web applications with cutting-edge technologies.</p>
+            <p>My journey in tech is driven by curiosity and a desire to build innovative solutions. From real-time messaging platforms to healthcare applications, I love turning ideas into reality through clean, efficient code.</p>
+            <p>When I'm not coding, I'm exploring new technologies, contributing to open-source projects, and constantly learning to stay ahead in this ever-evolving field.</p>
+            <div class="resume-buttons">
+              <a href="resume.pdf" target="_blank" class="btn-primary">
+                <i class="fas fa-eye"></i>
+                View Resume
+              </a>
+              <a href="resume.pdf" download="Prithiviraj_Resume.pdf" class="btn-secondary">
+                <i class="fas fa-download"></i>
+                Download Resume
+              </a>
             </div>
           </div>
         </div>
@@ -121,7 +107,6 @@
     <section id="projects" class="section">
       <div class="container">
         <h2 class="section-title" data-text="PROJECTS">
-          <span class="title-number">02.</span>
           PROJECTS
         </h2>
         <div class="projects-grid">
@@ -139,7 +124,7 @@
                 <span>Node.js</span>
                 <span>WebSockets</span>
                 <span>Realtime</span>
-                <span>Html,css,js</span>
+                <span>HTML/CSS/JS</span>
               </div>
             </div>
             <div class="project-links">
@@ -153,52 +138,66 @@
               </a>
             </div>
           </div>
-          
-          <div class="project-card">
-            <div class="project-header">
-              <div class="project-icon">
-                <i class="fas fa-pills"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+      <div class="container">
+        <h2 class="section-title" data-text="EXPERIENCE">
+          EXPERIENCE
+        </h2>
+        <div class="experience-timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3>Web Development Intern</h3>
+                <span class="timeline-date">September 27, 2025</span>
               </div>
-              <div class="project-status">COMPLETED</div>
-            </div>
-            <div class="project-content">
-              <h3>Medicine Reminder</h3>
-              <p>Healthcare mobile application helping users manage medication schedules with smart notifications and comprehensive tracking features.</p>
-              <div class="tech-stack">
-                <span>Android</span>
-                <span>Kotlin</span>
-                <span>Room DB</span>
+              <p class="timeline-institution">Relie Tech Company</p>
+              <p class="timeline-description">Successfully completed a 45-day internship focusing on web development. This experience enhanced my skills in web technologies and provided valuable practical exposure in a professional environment.</p>
+              <div class="timeline-highlights">
+                <span>Web Development</span>
+                <span>Professional Environment</span>
+                <span>Hands-on Experience</span>
               </div>
-            </div>
-            <div class="project-links">
-              <a href="#" class="btn-primary">
-                <i class="fas fa-mobile-alt"></i>
-                View App
-              </a>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <div class="project-card">
-            <div class="project-header">
-              <div class="project-icon">
-                <i class="fas fa-map-marked-alt"></i>
-              </div>
-              <div class="project-status">IN PROGRESS</div>
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section-title" data-text="SKILLS">       
+          SKILLS
+        </h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>Frontend</h3>
+            <div class="skill-items">
+              <span class="skill-item">HTML5</span>
+              <span class="skill-item">CSS3</span>
+              <span class="skill-item">JavaScript</span>
+              <span class="skill-item">Bootstrap</span>
             </div>
-            <div class="project-content">
-              <h3>Tamil Nadu Tourism</h3>
-              <p>Modern tourism website featuring AI-powered search responses that automatically suggests places when users search for cities like Chennai.</p>
-              <div class="tech-stack">
-                <span>React</span>
-                <span>AI Integration</span>
-                <span>Maps API</span>
-              </div>
+          </div>
+          <div class="skill-category">
+            <h3>Backend</h3>
+            <div class="skill-items">
+              <span class="skill-item">Python</span>
+              <span class="skill-item">MySQL</span>
             </div>
-            <div class="project-links">
-              <a href="#" class="btn-primary">
-                <i class="fas fa-globe"></i>
-                Preview
-              </a>
+          </div>
+          <div class="skill-category">
+            <h3>Tools & Platforms</h3>
+            <div class="skill-items">
+              <span class="skill-item">GitHub</span>
+              <span class="skill-item">VS Code</span>
+              <span class="skill-item">Figma</span>
             </div>
           </div>
         </div>
@@ -209,7 +208,6 @@
     <section id="education" class="section">
       <div class="container">
         <h2 class="section-title" data-text="EDUCATION">
-          <span class="title-number">03.</span>
           EDUCATION
         </h2>
         <div class="education-timeline">
@@ -218,14 +216,28 @@
             <div class="timeline-content">
               <div class="timeline-header">
                 <h3>Bachelor of Computer Science</h3>
-                <span class="timeline-date">2022 - 2026</span>
+                <span class="timeline-date">2023 - 2026</span>
               </div>
               <p class="timeline-institution">E S Arts and Science College (Co-Ed), Villupuram</p>
               <p class="timeline-status">Expected Graduation: 2026</p>
               <div class="timeline-highlights">
-                <span>Full Stack Development</span>
+                <span>Web Development</span>
                 <span>Deployment</span>
                 <span>Database Systems</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3>HIGHER STUDIES</h3>
+                <span class="timeline-date">2021 - 2022</span>
+              </div>
+              <p class="timeline-institution">John Dewey Matric Higher Secondary School, Villupuram</p>
+              <p class="timeline-status">Pass out: 2022</p>
+              <div class="timeline-highlights">
+                <span>Computer Science with Maths</span>
               </div>
             </div>
           </div>
@@ -237,7 +249,6 @@
     <section id="contact" class="section">
       <div class="container">
         <h2 class="section-title" data-text="CONTACT">
-          <span class="title-number">04.</span>
           CONTACT
         </h2>
         <div class="contact-content">
@@ -264,7 +275,7 @@
               <i class="fas fa-envelope"></i>
               <span>Email</span>
             </a>
-            <a href="https://linkedin.com/in/prithiviraj" class="contact-link">
+            <a href="https://linkedin.com/in/prithiviraj02112007" class="contact-link">
               <i class="fab fa-linkedin"></i>
               <span>LinkedIn</span>
             </a>
