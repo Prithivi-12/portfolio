@@ -1,4 +1,5 @@
 /* Portfolio CSS */
+
 :root {
   /* Color Palette */
   --bg-primary: #0a0a0f;
@@ -90,7 +91,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: 
+  background-image:
     radial-gradient(2px 2px at 20px 30px, var(--neon-cyan), transparent),
     radial-gradient(2px 2px at 40px 70px, var(--neon-pink), transparent),
     radial-gradient(1px 1px at 90px 40px, var(--neon-purple), transparent),
@@ -113,7 +114,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: 
+  background-image:
     linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
   background-size: 50px 50px;
@@ -476,16 +477,60 @@ header {
   gap: 1rem;
 }
 
-.title-number {
-  color: var(--neon-cyan);
-  font-size: 1.2rem;
-}
-
 .section-title::after {
   content: '';
   flex: 1;
   height: 2px;
   background: linear-gradient(90deg, var(--neon-cyan), transparent);
+}
+
+/* About Section */
+.about-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-text {
+  background: var(--bg-card);
+  border-radius: 15px;
+  padding: 3rem;
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-text::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-primary);
+}
+
+.about-text p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.about-text p:last-of-type {
+  margin-bottom: 2rem;
+}
+
+.resume-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.resume-buttons .btn-primary,
+.resume-buttons .btn-secondary {
+  flex: 1;
+  min-width: 180px;
+  justify-content: center;
 }
 
 /* Skills Section */
@@ -705,6 +750,109 @@ header {
   background: rgba(0, 255, 255, 0.1);
 }
 
+/* Experience Section */
+.experience-timeline {
+  position: relative;
+  padding: 2rem 0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.experience-timeline::before {
+  content: '';
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--gradient-primary);
+}
+
+.experience-timeline .timeline-item {
+  position: relative;
+  padding-left: 80px;
+  margin-bottom: 3rem;
+}
+
+.experience-timeline .timeline-marker {
+  position: absolute;
+  left: 20px;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--neon-cyan);
+  box-shadow: var(--shadow-neon-cyan);
+  border: 3px solid var(--bg-primary);
+  z-index: 1;
+}
+
+.experience-timeline .timeline-content {
+  background: var(--bg-card);
+  border-radius: 15px;
+  padding: 2rem;
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.experience-timeline .timeline-content:hover {
+  border-color: var(--neon-cyan);
+  box-shadow: var(--shadow-neon-cyan);
+  transform: translateY(-5px);
+}
+
+.experience-timeline .timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.experience-timeline .timeline-header h3 {
+  font-family: var(--font-heading);
+  color: var(--neon-cyan);
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.experience-timeline .timeline-date {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.experience-timeline .timeline-institution {
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.experience-timeline .timeline-description {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.experience-timeline .timeline-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.experience-timeline .timeline-highlights span {
+  background: rgba(0, 255, 255, 0.1);
+  color: var(--neon-cyan);
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  border: 1px solid rgba(0, 255, 255, 0.3);
+}
+
 /* Education Timeline */
 .education-timeline {
   position: relative;
@@ -831,6 +979,7 @@ header {
 .contact-item i {
   color: var(--neon-cyan);
   width: 20px;
+  font-size: 1rem;
 }
 
 .contact-links {
@@ -860,7 +1009,7 @@ header {
 }
 
 .contact-link i {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: var(--neon-cyan);
 }
 
@@ -894,6 +1043,40 @@ footer {
 
 .footer-links a:hover {
   color: var(--neon-purple);
+}
+
+/* Animation Classes */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.6s ease;
+}
+
+.slide-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.6s ease;
+}
+
+.slide-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /* Mobile Responsive */
@@ -963,6 +1146,24 @@ footer {
     width: 100px;
   }
 
+  /* About Section */
+  .about-text {
+    padding: 2rem;
+  }
+  
+  .about-text p {
+    font-size: 1rem;
+  }
+  
+  .resume-buttons {
+    flex-direction: column;
+  }
+  
+  .resume-buttons .btn-primary,
+  .resume-buttons .btn-secondary {
+    width: 100%;
+  }
+
   /* Skills */
   .skills-grid {
     grid-template-columns: 1fr;
@@ -975,6 +1176,35 @@ footer {
 
   .project-links {
     flex-direction: column;
+  }
+
+  /* Experience Timeline */
+  .experience-timeline {
+    padding-left: 0;
+  }
+  
+  .experience-timeline::before {
+    left: 15px;
+  }
+  
+  .experience-timeline .timeline-item {
+    padding-left: 50px;
+  }
+  
+  .experience-timeline .timeline-marker {
+    left: 6px;
+  }
+  
+  .experience-timeline .timeline-content {
+    padding: 1.5rem;
+  }
+  
+  .experience-timeline .timeline-header {
+    flex-direction: column;
+  }
+  
+  .experience-timeline .timeline-header h3 {
+    font-size: 1.3rem;
   }
 
   /* Timeline */
@@ -1020,10 +1250,22 @@ footer {
     font-size: 1.5rem;
   }
 
+  .about-text {
+    padding: 1.5rem;
+  }
+
   .skill-category,
   .project-card,
   .timeline-content {
     padding: 1.5rem;
+  }
+  
+  .experience-timeline .timeline-content {
+    padding: 1rem;
+  }
+  
+  .experience-timeline .timeline-header h3 {
+    font-size: 1.1rem;
   }
 
   .loading-logo {
@@ -1033,38 +1275,4 @@ footer {
   .loading-bar {
     width: 250px;
   }
-}
-
-/* Animation Classes */
-.fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.6s ease;
-}
-
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.slide-in-left {
-  opacity: 0;
-  transform: translateX(-50px);
-  transition: all 0.6s ease;
-}
-
-.slide-in-left.visible {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.slide-in-right {
-  opacity: 0;
-  transform: translateX(50px);
-  transition: all 0.6s ease;
-}
-
-.slide-in-right.visible {
-  opacity: 1;
-  transform: translateX(0);
 }
